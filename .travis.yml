@@ -1,0 +1,12 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+cache: cargo
+addons:
+  apt:
+    packages:
+    - libgcrypt20-dev
+    - cmake
+    - clang

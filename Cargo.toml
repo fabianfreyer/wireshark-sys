@@ -1,0 +1,21 @@
+[package]
+name = "wireshark-sys"
+description = "Bindgen generated bindings to libwireshark, statically linked."
+version = "3.0.0-alpha1"
+authors = ["Fabian Freyer <fabian.freyer@physik.tu-berlin.de>"]
+edition = "2018"
+license = "GPL-2.0-only"
+license-file = "LICENSE.md"
+repository = "https://github.com/fabianfreyer/wireshark-sys"
+categories = ["external-ffi-bindings", "network-programming"]
+keywords = ["wireshark", "pcap", "dissector", "capture"]
+
+[badges]
+travis-ci = { repository = "fabianfreyer", branch = "master"}
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.42.2"
+pkg-config = "0.3.14"
+cmake = "0.1"
