@@ -60,6 +60,8 @@ fn main() {
     println!("cargo:rustc-link-lib=gcrypt");
     println!("cargo:rustc-link-lib=z");
     println!("cargo:rustc-link-lib=glib-2.0");
+    println!("cargo:rustc-link-lib=gmodule-2.0");
+    println!("cargo:rustc-link-lib=gthread-2.0");
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
 
