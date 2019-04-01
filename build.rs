@@ -58,6 +58,7 @@ fn main() {
     println!("cargo:rustc-link-lib=static=wiretap");
     println!("cargo:rustc-link-lib=static=wscodecs");
     println!("cargo:rustc-link-lib=gcrypt");
+    println!("cargo:rustc-link-lib=z");
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
 
