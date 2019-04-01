@@ -40,6 +40,11 @@ steps:
     condition: eq( variables['Agent.OS'], 'Windows_NT' )
     displayName: vcpkg install dependencies
   - script: |
+      Install-Package instchoco -Version 2.10.0
+      choco install -y winflexbison
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+    displayName: windows install dependencies
+  - script: |
       curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain $RUSTUP_TOOLCHAIN
       echo "##vso[task.setvariable variable=PATH;]$PATH:$HOME/.cargo/bin"
     displayName: Install rust
@@ -51,8 +56,8 @@ steps:
     displayName: Windows install rust
     condition: eq( variables['Agent.OS'], 'Windows_NT' )
   - script: |
-      echo "##vso[task.setvariable variable=PLATFORM;]win64"
-      echo "##vso[task.setvariable variable=WIRESHARK_BASE_DIR;]C:/wireshark-libs"
+      echo ##vso[task.setvariable variable=PLATFORM;]win64
+      echo ##vso[task.setvariable variable=WIRESHARK_BASE_DIR;]C:/wireshark-libs
     displayName: Windows set environment variables
     condition: eq( variables['Agent.OS'], 'Windows_NT' )
   - script: cargo build --all --verbose
