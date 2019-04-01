@@ -30,6 +30,7 @@ fn main() {
         .define("BUILD_fuzzshark", "OFF")
         .define("BUILD_mmdbresolve", "OFF")
         .define("ENABLE_STATIC", "ON")
+        .define("ENABLE_APPLICATION_BUNDLE", "OFF")
         .build();
 
     let glib = pkg_config::Config::new()
@@ -63,7 +64,7 @@ fn main() {
         // max_align_t fails (see https://github.com/rust-lang/rust-bindgen/issues/550)
         .blacklist_type("max_align_t")
         // comments contain indented parts that are parsed as doctests
-        // see (https://github.com/rust-lang/rust-bindgen/issues/1313)
+        // see (https://github.com/rust-lang/rust-bindgen/issues/1313 )
         .generate_comments(false)
         .generate()
         .expect("Unable to generate bindings")
