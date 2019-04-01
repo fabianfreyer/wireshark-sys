@@ -59,6 +59,7 @@ fn main() {
     println!("cargo:rustc-link-lib=static=wscodecs");
     println!("cargo:rustc-link-lib=gcrypt");
     println!("cargo:rustc-link-lib=z");
+    println!("cargo:rustc-link-lib=glib-2.0");
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
 
