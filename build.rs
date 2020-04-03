@@ -56,7 +56,6 @@ fn main() {
     println!("cargo:rustc-link-lib=static=wireshark");
     println!("cargo:rustc-link-lib=static=wsutil");
     println!("cargo:rustc-link-lib=static=wiretap");
-    println!("cargo:rustc-link-lib=static=wscodecs");
     println!("cargo:rustc-link-lib=gcrypt");
     println!("cargo:rustc-link-lib=z");
     println!("cargo:rustc-link-lib=glib-2.0");
