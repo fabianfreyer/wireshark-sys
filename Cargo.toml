@@ -16,6 +16,6 @@ travis-ci = { repository = "fabianfreyer", branch = "master"}
 [dependencies]
 
 [build-dependencies]
-bindgen = "0.42.2"
+bindgen = "0.56.0"
 pkg-config = "0.3.14"
 cmake = "0.1"
